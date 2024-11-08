@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('login2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 350px;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .form-group .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .form-group .radio-group label {
+            margin-right: 20px;
+            color: #333;
+        }
+        .form-group .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .form-group .checkbox-group label {
+            margin-right: 20px;
+            color: #333;
+        }
+        .form-group .checkbox-column {
+            width: 33.33%;
+        }
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2 style="text-align: center; margin-bottom: 30px;">Sample Form</h2>
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label style="margin-bottom: 10px; display: block;">Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label style="margin-bottom: 10px; display: block;">Civil Status:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-column">
+                    <input type="checkbox" id="single" name="status" value="single">
+                    <label for="single">Single</label>
+                </div>
+                <div class="checkbox-column">
+                    <input type="checkbox" id="married" name="status" value="married">
+                    <label for="married">Married</label>
+                </div>
+                <div class="checkbox-column">
+                    <input type="checkbox" id="divorced" name="status" value="divorced">
+                    <label for="divorced">Divorced</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div id="successMessage" class="success-message" style="display: none;">Form submitted successfully!</div>
+</div>
+
+<script>
+    document.getElementById('sampleForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('successMessage').style.display = 'none';
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>

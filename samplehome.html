@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      overflow: auto; /* Clearfix for float */
+    }
+    .logo {
+      float: left;
+    }
+    .login-container {
+      float: right;
+    }
+    .login-container .form-container {
+      width: 300px;
+      margin-top: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #45a049;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="your-logo.png" alt="Logo" width="150">
+    </div>
+    <div class="login-container">
+      <div class="form-container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="container" id="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo nec magna ultrices tempus. Curabitur id diam sit amet purus suscipit tristique. Vivamus a purus risus. Sed pharetra ex id dolor vestibulum, eget pulvinar eros tincidunt. Proin auctor vehicula neque, sed interdum arcu bibendum in. Nulla facilisi. Aliquam nec magna ac felis tempus facilisis.</p>
+    <p>Donec tristique sem nec erat aliquet, nec auctor nisi viverra. Integer interdum nisi vel mauris tristique, quis bibendum sem laoreet. Duis id justo euismod, viverra lorem vel, tristique arcu. Nam gravida erat ut nunc ultricies, et fermentum lectus varius. Cras pharetra, dui eget laoreet hendrerit, orci magna dignissim mi, auctor commodo est eros auctor odio. Duis tincidunt suscipit orci, nec finibus est feugiat et.</p>
+  </div>
+
+  <div class="container" id="register">
+    <div class="form-container">
+      <h2>Register</h2>
+      <form action="register.php" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <input type="submit" value="Register">
+      </form>
+    </div>
+  </div>
+
+  <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+    <p>&copy; 2024 Beautiful Home. All rights reserved.</p>
+  </footer>
+</body>
+</html>
